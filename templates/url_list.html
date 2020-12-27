@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container">
+  <br /><br /><br /><br />
+  <h4>{% if data %}</h4>
+  {% for obj in data %}
+  <div class="row">
+    <div class="col-6">
+      <p>{{obj.id}})&nbsp&nbsp&nbsp&nbsp{{obj.url}}</p>
+    </div>
+    <div class="col-6">
+      <p>{{obj.short_url}}</p>
+    </div>
+
+  </div>
+  <br />
+  {% endfor %} {% endif %}
+</div>
+{% endblock %}

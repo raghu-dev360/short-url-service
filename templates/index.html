@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container">
+  <div class="jumbotron">
+
+    <h1>Enter a URL to shorten:</h1><br><br><br>
+
+    <form method="POST" >
+
+      {{form}}
+      {% csrf_token %}
+
+      <input class="btn btn-success" type="submit" value="Submit">
+
+    </form>
+    <br><br><br>
+
+    {% if data %}
+
+      <p>Your Shortened URL: <a href="{{ fetch_short_url }}">{{ fetch_short_url }}</a></p>
+
+     {% endif %}
+
+      <a href="{% url 'url-list'%}"><button class="btn btn-info" type="button" >URL's List</button></a>
+
+   </div>
+
+ </div>
+{% endblock %}
