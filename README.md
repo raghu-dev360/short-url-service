@@ -14,4 +14,5 @@ http://127.0.0.1:8000/short/
 Admin:
 
 username : raghu
-passwrd : task123
+
+password : task123
